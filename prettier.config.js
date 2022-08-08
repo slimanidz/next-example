@@ -1,4 +1,4 @@
 module.exports = {
     semi: false,
-    indent: 2
+    tabWidth: 2
 }
