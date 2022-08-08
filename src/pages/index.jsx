@@ -4,13 +4,15 @@ import axios from "axios"
 
 const IndexPage = () => {
   const [posts, setPosts] = useState([])
-  
+
   useEffect(() => {
-      axios.get("https://nepsic-3001.preview.csb.app/posts")
-        .then(({ data }) => setPosts(data))
+    axios
+      .get("https://nepsic-3001.preview.csb.app/posts")
+      .then(({ data }) => setPosts(data))
   }, [])
-    
-  return <Page>
+
+  return (
+    <Page>
       <h1>Welcome to my blog</h1>
       <div>
         {posts.map((post) => (
@@ -18,9 +20,10 @@ const IndexPage = () => {
             <h1 className="text-4xl font-bold">{post.title}</h1>
             <p>{post.content}</p>
           </article>
-        ))}    
+        ))}
       </div>
-  </Page>
+    </Page>
+  )
 }
 
 export default IndexPage
