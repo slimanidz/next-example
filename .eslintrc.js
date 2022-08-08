@@ -3,7 +3,6 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "prettier",
-    "next",
     "plugin:react/recommended",
   ],
   plugins: ["react", "react-hooks"],
